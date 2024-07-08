@@ -45,7 +45,7 @@ def hello_world():
 			user_question = body["entry"][0]["changes"][0]['value']["messages"][0]["text"]["body"]
 
 			response = ai_response(user_question)
-			url = "https://graph.facebook.com/v18.0/115446774859882/messages"
+			url = "https://graph.facebook.com/v19.0/339927222545004/messages"
 			headers = {
 				f"Authorization": f"Bearer {WHAT_TOKEN}",
 				"Content-Type": "application/json"
