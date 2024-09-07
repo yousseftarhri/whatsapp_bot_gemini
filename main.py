@@ -37,7 +37,7 @@ def check_webhook():
 		else:
 			return
 
-@app.route('/',methods=['GET',"POST"])
+@app.route('/',methods=["POST"])
 def send_message():
 	if request.method == 'POST':
 		body = request.get_json()
