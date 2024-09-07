@@ -22,8 +22,8 @@ def ai_response(ask):
     )
     return response.text
 
-@app.route('/',methods=['GET',"POST"])
-def hello_world():
+@app.route('/', methods=["GET"])
+def check_webhook():
 	if request.method == 'GET':
 		mode = request.args.get('hub.mode')
 		verify_token = request.args.get('hub.verify_token')
@@ -37,6 +37,8 @@ def hello_world():
 		else:
 			return
 
+@app.route('/',methods=['GET',"POST"])
+def send_message():
 	if request.method == 'POST':
 		body = request.get_json()
 		print(body)
