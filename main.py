@@ -61,7 +61,7 @@ def send_message():
 
 			response = requests.post(url, json=data, headers=headers)
 			print(response.text)
-			return Response(body, 200)
+			return Response(status=200)
 
 
 
